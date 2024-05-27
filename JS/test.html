@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>btn 1</button>
+    <button>btn 2</button>
+</body>
+<script>
+    let btns = document.querySelectorAll('button')
+    btns[0].addEventListener("click", () => {
+        let detail = prompt("Enter your name and age");
+        detail = detail.split(" ");
+        localStorage.setItem(detail[0], detail[1]);
+    })
+    btns[1].addEventListener("click", () => {
+        let detail=prompt("what you want?");
+        detail=localStorage.getItem(detail);
+        alert(detail);
+    })
+</script>
+
+</html>
